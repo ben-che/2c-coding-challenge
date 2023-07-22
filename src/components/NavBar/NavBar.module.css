@@ -1,0 +1,46 @@
+nav {
+    width: 100%;
+}
+
+.MobileNavigationContainer {
+    display: flex;
+    flex-direction: column;
+}
+
+.MobileNavigationContainer > div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+}
+
+.DesktopNavigationContainer {
+    display: none;
+}
+
+.NavigationProfileName {
+    color: #605DEC;
+}
+
+@media only screen and (min-width: 700px) {
+    .MobileNavigationContainer {
+        display: none;
+    }
+
+    .DesktopNavigationContainer {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .DesktopNavigationContainer > div {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .DesktopNavigationContainer > div > img {
+        cursor: pointer;
+        margin: 0 7px;
+    }
+}
