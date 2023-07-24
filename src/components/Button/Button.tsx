@@ -4,9 +4,10 @@ import styles from "./Button.module.css";
 interface Props {
   primary?: boolean;
   children?: ReactNode;
+  onClick: () => void;
 }
 
-export function Button({ primary, children }: Props) {
+export function Button({ primary, children, onClick }: Props) {
   const ButtonStyles = primary ? styles.PrimaryButton : styles.SecondaryButton;
-  return <button className={ButtonStyles}>{children}</button>;
+  return <button onClick={onClick} className={ButtonStyles}>{children}</button>;
 }

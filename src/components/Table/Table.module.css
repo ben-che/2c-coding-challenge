@@ -1,5 +1,5 @@
 table {
-  margin: 0;
+  margin: 10px 0;
   display: flex;
   flex-direction: column;
 }
@@ -18,12 +18,12 @@ tr {
 }
 
 tr > th:last-child {
-    border-left: 1px solid #e4e4ef;
+  border-left: 1px solid #e4e4ef;
 }
 
 tr > td:last-child {
-    border-left: 1px solid #e4e4ef;
-    justify-content: flex-end;
+  border-left: 1px solid #e4e4ef;
+  justify-content: flex-end;
 }
 
 table > tbody {
@@ -42,6 +42,13 @@ table > tbody {
   align-items: center;
   padding: 20px 15px;
   width: 100%;
+}
+
+.TableBodyEmpty {
+  display: flex;
+  height: 300px;
+  align-items: center;
+  justify-content: center;
 }
 
 @media only screen and (min-width: 700px) {

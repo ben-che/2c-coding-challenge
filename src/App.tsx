@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { NavBar, Table, TextStyle } from "components";
+import { Button, NavBar, Table, TextStyle } from "components";
 import { mockData } from "./mockData";
 import { ProductData } from "types/ProductData";
 
@@ -30,6 +30,24 @@ function App() {
     null
   );
 
+  function handleSearch(input: string) {
+    // Adding some basic handling for spaces, missed user input
+    const parsedInput = input
+      .trim()
+      .split(" ")
+      .filter((s) => s.length > 0)
+      .join(" ");
+    if (parsedInput === "") {
+      setSearchResults(null);
+    } else {
+      const filteredData = data.filter((product) => {
+        return product.product.toLowerCase().includes(parsedInput);
+      });
+
+      setSearchResults(filteredData);
+    }
+  }
+
   const currentProductCount = searchResults
     ? searchResults?.length
     : data.length;
@@ -41,14 +59,14 @@ function App() {
 
   return (
     <div className={styles.App}>
-      <NavBar />
+      <NavBar handleSearch={handleSearch} />
       <p>
         <TextStyle strong>Products</TextStyle>{" "}
         <TextStyle subdued>
           {currentProductCount} of {maxProductCount} results
         </TextStyle>
       </p>
-      <Table />
+      <Table productData={searchResults ? searchResults : data} />
     </div>
   );
 }

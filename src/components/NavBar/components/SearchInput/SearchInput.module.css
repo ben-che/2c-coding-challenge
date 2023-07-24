@@ -1,29 +1,42 @@
-.SearchInputContainer > input {
-    height: 44px;
-    width: calc(60% - 43px);
-    border: 1px solid #DCDFE3;
-    border-radius: 4px;
-    background: transparent url('./icon.png') no-repeat;
-    background-position-y: 13px;
-    background-position-x: 14px;
-    padding: 0px 15px 0px 38px;
+form {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  position: relative;
 }
 
-@media only screen and (min-width: 500px) { 
-    .SearchInputContainer > input {
-        width: calc(70% - 43px);
-        margin-right: 5px;
-    }
+.SearchInputContainer > input {
+  height: 44px;
+  width: calc(60% - 43px);
+  border: 1px solid #dcdfe3;
+  border-radius: 4px;
+  background: transparent url("./icon.png") no-repeat;
+  background-position-y: 13px;
+  background-position-x: 14px;
+  padding: 0px 15px 0px 38px;
+}
+
+.ErrorMessage {
+  position: absolute;
+  top: 35px;
+  left: 0;
+}
+
+@media only screen and (min-width: 500px) {
+  .SearchInputContainer > input {
+    width: calc(70% - 43px);
+    margin-right: 5px;
+  }
 }
 
 @media only screen and (min-width: 800px) {
-    .SearchInputContainer {
-        width: 50%;
-        display: flex;
-    }
+  .SearchInputContainer {
+    width: 50%;
+    display: flex;
+  }
 
-    .SearchInputContainer > input {
-        width: 100%;
-        margin-right: 20px;
-    }
+  .SearchInputContainer > input {
+    width: 100%;
+    margin-right: 20px;
+  }
 }

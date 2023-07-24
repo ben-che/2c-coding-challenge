@@ -1,3 +1,4 @@
+import { TextStyle } from "components/TextStyle";
 import { ProductData } from "types/ProductData";
 import { TableRow } from "./components";
 import styles from "./Table.module.css";
@@ -7,7 +8,7 @@ interface Props {
 }
 
 export function Table({ productData }: Props) {
-  const tableMarkup = productData.map((data) => {
+  const tableRowMarkup = productData.map((data) => {
     const { id, product, serial, total, quantity } = data;
     return (
       <TableRow
@@ -20,6 +21,15 @@ export function Table({ productData }: Props) {
       />
     );
   });
+
+  const tableBodyMarkup = tableRowMarkup.length === 0 ? (
+    <tr className={styles.TableBodyEmpty}>
+      <TextStyle strong>No products found</TextStyle>
+    </tr>
+  ) : (
+    tableRowMarkup
+  );
+
   return (
     <table>
       <thead className={styles.TableHeader}>
@@ -31,7 +41,7 @@ export function Table({ productData }: Props) {
           <th className={styles.SecondaryTableColumn}>Prices</th>
         </tr>
       </thead>
-      <tbody>{tableMarkup}</tbody>
+      <tbody>{tableBodyMarkup}</tbody>
     </table>
   );
 }

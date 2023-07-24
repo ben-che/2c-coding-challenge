@@ -33,7 +33,7 @@ export function TableRow({
         <p>{id}</p>
       </td>
       <td className={styles.SecondaryTableCell}>
-        <p>{badgeMarkup}</p>
+        {badgeMarkup}
       </td>
       <td className={styles.SecondaryTableCell}>
         <p>{quantity}</p>
