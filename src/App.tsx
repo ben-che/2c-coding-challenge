@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { Modal, NavBar, Table, TextStyle } from "components";
 import { mockData } from "./mockData";
 import { ProductData } from "types/ProductData";
-import laptop from "./laptop.png";
+import laptop from "./assets/laptop.png";
 
 import styles from "./App.module.css";
 
