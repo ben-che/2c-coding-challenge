@@ -27,4 +27,8 @@ tr {
     width: 50%;
     padding: 5px 15px;
   }
+
+  .Quantity {
+    display: none;
+  }
 }

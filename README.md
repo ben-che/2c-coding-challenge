@@ -13,9 +13,13 @@ I reached out earlier in the week in a reply to the email I received giving me t
 
 - The assignment says to use a RESTful endpoint to fetch the data, but I wasn't given any actual endpoints, I ended up mocking the request and importing the JSON in a file
 
-- The mock data provided doesn't have a "status" field - so I ended up changing some of the inventory quantity numbers on the mock data to allow for two states (in stock and out of stock)
+- In a production setting, the search feature would also be some kind of API request instead of doing the filtering client-side. This is because it is unlikely that all products can be listed on a single page if there are many products, and the results will likely be paginated in production. The server would have to handle the actual searching of products because the client will not have knowledge of products that fit the search criteria but aren't returned on the initial load.
+
+- The mock data provided doesn't have a "status" field, so I wasn't entirely sure what to display on that column
 
 - I didn't see any Tablet styles on the Figma file and the jump from 390px to 1440px is pretty big, so I tried my best to make up some styles in between that would still make the UI look good
+
+- There aren't any product pictures included with the mock JSON, so I ended up downloading a stock image and importing it on all products
 
 
 
@@ -29,3 +33,12 @@ There were certain states and error handling scenarios that weren't present in t
 - The validation required for the text field is unclear in the requirements - I ended up only allowing alphanumeric characters and adding an error message as soon as the user types in a special character
 
 - The search function will not fire if there is currently an error present.
+
+
+### Designs
+Designs from Figma:
+
+![Desktop-Table](./documentation/Desktop%20-%20Table.png)
+![Desktop-Modal](./documentation/Desktop%20-%20Modal.png)
+![Mobile - Modal](./documentation/Mobile%20-%20Modal.png)
+![Mobile - Table](./documentation/Mobile%20-%20Table.png)

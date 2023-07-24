@@ -41,7 +41,7 @@ export function TableRow({
       <td className={styles.MainTableCell}>
         <p>{product}</p>
         <p>
-          <TextStyle subdued>{serial}</TextStyle>
+          <TextStyle subdued>{serial} <span className={styles.Quantity}>- Qty: {quantity}</span></TextStyle>
         </p>
       </td>
       <td className={styles.SecondaryTableCell}>
