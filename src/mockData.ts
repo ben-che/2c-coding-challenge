@@ -1,6 +1,6 @@
 export const mockData = [
   {
-    product: "Macbook Pro 16 inch (2020 ) For Sale",
+    product: "Macbook Pro 16 inch (2020) For Sale",
     serial: "BA9212320",
     id: 1374,
     quantity: 122,
@@ -10,7 +10,7 @@ export const mockData = [
     product: "Gaming Chair, local pickup only",
     serial: "BA9212320",
     id: 3933,
-    quantity: 245,
+    quantity: 70,
     total: 943.65,
   },
   {
@@ -24,26 +24,25 @@ export const mockData = [
     product: "Heimer Miller Sofa (Mint Condition)",
     serial: "SD9212969",
     id: 5560,
-    quantity: 26,
+    quantity: 0,
     total: 275.43,
   },
   {
     product: "iPad Pro 2017 Model",
     serial: "012921097",
     id: 6065,
-    quantity: 76,
+    quantity: 20,
     total: 475.22,
   },
   {
     product: "Gopro hero 7 (with receipt)",
     serial: "BA9212320",
     id: 4349,
-    quantity: 47,
+    quantity: 25,
     total: 219.78,
   },
   {
     product: "Dell Computer Monitor",
-
     serial: "SD9212969",
     id: 9359,
     quantity: 54,
@@ -67,7 +66,7 @@ export const mockData = [
     product: "DJI Mavic Pro 2",
     serial: "SD9212969",
     id: 3536,
-    quantity: 39,
+    quantity: 0,
     total: 576.28,
   },
 ];

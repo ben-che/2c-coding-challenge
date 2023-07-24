@@ -12,4 +12,6 @@ If the above instructions don't work, let me know and I can transfer the code in
 
 - I didn't see any Tablet styles on the Figma file and the jump from 390px to 1440px is pretty big, so I tried my best to make up some styles in between that would still make the UI look good
 
+- The mock data provided doesn't have a "status" field - so I ended up changing some of the inventory quantity numbers on the mock data to allow for two states (in stock and out of stock)
+
 <!-- TODO: I reached out to see if I'm supposed to stub the JSON data and create a server with my own API endpoints, but I haven't heard back quite yet. -->

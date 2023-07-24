@@ -1,8 +1,10 @@
 .Subdued {
     color: #808080;
+    font-size: 12px;
 }
 
 .Strong {
     color: #1A1A1A;
     font-weight: 700;
+    font-size: 16px;
 }

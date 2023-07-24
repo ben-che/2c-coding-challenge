@@ -1,0 +1,31 @@
+.Badge {
+    display: flex;
+    flex-wrap: nowrap;
+    padding: 8px 20px;
+    background-color: #EBF6EB;
+    color: #31AA27;
+    border-radius: 12px;
+}
+
+.Badge > * {
+    margin: 0;
+    display: flex;
+    white-space: nowrap;
+
+}
+
+.BadgeInfo {
+    background-color: #EDEDFE;
+    color: #605DEC;
+}
+
+
+.BadgeWarning {
+    background-color: #FFF4E4;
+    color: #E99518;
+}
+
+.BadgeCritical {
+    background-color: #FFF0F0;
+    color: #F93232;
+}
