@@ -17,10 +17,11 @@ I reached out earlier in the week in a reply to the email I received giving me t
 
 - The mock data provided doesn't have a "status" field, so I wasn't entirely sure what to display on that column
 
+- The mock data provided also didn't have any product information; I hardcoded what was on the designs
+
 - I didn't see any Tablet styles on the Figma file and the jump from 390px to 1440px is pretty big, so I tried my best to make up some styles in between that would still make the UI look good
 
 - There aren't any product pictures included with the mock JSON, so I ended up downloading a stock image and importing it on all products
-
 
 
 ### Additional Notes:
@@ -32,7 +33,7 @@ There were certain states and error handling scenarios that weren't present in t
 
 - The validation required for the text field is unclear in the requirements - I ended up only allowing alphanumeric characters and adding an error message as soon as the user types in a special character
 
-- The search function will not fire if there is currently an error present.
+- The search function will not fire if there is currently an error present
 
 
 ### Designs

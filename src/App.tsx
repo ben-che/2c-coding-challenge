@@ -1,7 +1,8 @@
 import { useEffect, useState } from "react";
-import { Button, NavBar, Table, TextStyle } from "components";
+import { Modal, NavBar, Table, TextStyle } from "components";
 import { mockData } from "./mockData";
 import { ProductData } from "types/ProductData";
+import laptop from "./laptop.png";
 
 import styles from "./App.module.css";
 
@@ -53,6 +54,14 @@ function App() {
     : data.length;
   const maxProductCount = data.length;
 
+  const [modalOpen, setModalOpen] = useState(false);
+  const [selectedProduct, setSelectedProduct] = useState<ProductData>();
+
+  function handleSelectProduct(product: ProductData) {
+    setSelectedProduct(product);
+    setModalOpen(true);
+  }
+
   if (loading) {
     return <div>Mocking fetch request - wait 3 seconds!</div>;
   }
@@ -66,7 +75,32 @@ function App() {
           {currentProductCount} of {maxProductCount} results
         </TextStyle>
       </p>
-      <Table productData={searchResults ? searchResults : data} />
+      <Table productData={searchResults ? searchResults : data} handleSelectProduct={handleSelectProduct} />
+      <Modal
+        title={selectedProduct?.product || ""}
+        open={modalOpen}
+        onClose={() => setModalOpen(false)}
+      >
+        <div className={styles.ModalProductBody}>
+          <img src={laptop} alt="product placeholder"></img>
+          <div>
+            <p>Key Features</p>
+            <ul>
+              <li>2.6 GHz Intel Core i7 6-Core (9th Gen)</li>
+              <li>16GB of 2666 MHz DDR4 RAM | 8TB SSD </li>
+              <li>16" 3072 x 1920 Retina Display </li>
+              <li>AMD Radeon Pro 5600M GPU (8GB HBM2)</li>
+            </ul>
+            <p>
+              The Apple 16" MacBook Pro features a 16" Retina Display, a Magic
+              Keyboard with a redesigned scissor mechanism, a six-speaker
+              high-fidelity sound system, and an advanced thermal design. This
+              MacBook Pro also features an AMD Radeon Pro 5600M graphics card, a
+              7nm mobile discrete GPU designed for pro users. With 8GB of HBM2
+            </p>
+          </div>
+        </div>
+      </Modal>
     </div>
   );
 }

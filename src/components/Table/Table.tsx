@@ -5,13 +5,15 @@ import styles from "./Table.module.css";
 
 interface Props {
   productData: ProductData[];
+  handleSelectProduct: (product: ProductData) => void;
 }
 
-export function Table({ productData }: Props) {
+export function Table({ productData, handleSelectProduct }: Props) {
   const tableRowMarkup = productData.map((data) => {
     const { id, product, serial, total, quantity } = data;
     return (
       <TableRow
+        handleSelectProduct={() => {handleSelectProduct(data)}}
         id={id}
         product={product}
         serial={serial}

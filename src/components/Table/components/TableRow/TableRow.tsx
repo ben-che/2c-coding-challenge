@@ -3,13 +3,20 @@ import { TextStyle } from "components/TextStyle";
 import { ProductData } from "types/ProductData";
 import styles from "./TableRow.module.css";
 
+type CombinedProps = ProductData & Props;
+
+interface Props {
+  handleSelectProduct: () => void;
+}
+
 export function TableRow({
   id,
   product,
   serial,
   quantity,
   total,
-}: ProductData) {
+  handleSelectProduct,
+}: CombinedProps) {
   // This is some additional logic I added for the Badges; the designs and instructions
   // as well as mock JSON data didn't provide a status field, so I made up some statuses
   // to add based on the amount of inventory a product has.
@@ -28,7 +35,7 @@ export function TableRow({
   }
 
   return (
-    <tr>
+    <tr className={styles.BodyTableRow} onClick={handleSelectProduct}>
       <td className={styles.SecondaryTableCell}>
         <p>{id}</p>
       </td>

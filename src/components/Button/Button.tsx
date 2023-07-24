@@ -9,5 +9,5 @@ interface Props {
 
 export function Button({ primary, children, onClick }: Props) {
   const ButtonStyles = primary ? styles.PrimaryButton : styles.SecondaryButton;
-  return <button onClick={onClick} className={ButtonStyles}>{children}</button>;
+  return <button onClick={onClick} className={`${styles.button} ${ButtonStyles}`}>{children}</button>;
 }

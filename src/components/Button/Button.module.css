@@ -1,4 +1,4 @@
-button {
+.button {
     width: 97px;
     height: 44px;
     font-weight: 500;
@@ -8,6 +8,7 @@ button {
     justify-content: center;
     border: 0px;
     border-radius: 4px;
+    cursor: pointer;
 }
 
 .PrimaryButton {
