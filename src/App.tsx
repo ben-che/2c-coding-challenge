@@ -42,7 +42,7 @@ function App() {
       setSearchResults(null);
     } else {
       const filteredData = data.filter((product) => {
-        return product.product.toLowerCase().includes(parsedInput);
+        return product.product.toLowerCase().includes(parsedInput.toLowerCase());
       });
 
       setSearchResults(filteredData);

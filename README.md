@@ -15,6 +15,8 @@ Some additional things not present in the design that I added:
 
 - I added an empty state to the table for when there's no data or the search result is empty
 
+- There doesn't seem to be a "status" field on the mock data, so I ended up rendering inventory status based on how much quantity was left as a placeholder. There also wasn't additional product details, so most of the information on the modal is hardcoded with the exception of the title.
+
 - The validation required for the text field is unclear in the requirements - I ended up only allowing alphanumeric characters and adding an error message as soon as the user types in a special character
 
 - The search function will not fire if there is currently an error present. Because there's a search button present, I'm assuming the search will not run as an onChange event within the input, and will be triggered via the Enter button or the Search button
